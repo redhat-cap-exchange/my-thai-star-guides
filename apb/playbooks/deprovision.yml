@@ -35,9 +35,7 @@
     with_items:
       - gogs
       - nexus
-      - guides-codeready
       - codeready
-      - etherpad
   
   - name: Delete configmap 'codeready-operator'
     command: "oc delete cm codeready-operator -n {{ namespace }}"
@@ -50,12 +48,3 @@
       - serviceaccount
       - rolebinding
       - role
-
-  - name: Delete projects if exists
-    command: "oc delete project {{ infra_project_name }} {{ project_name }}"
-    register: project_result
-    ignore_errors: true
-    vars:
-      infra_project_name: "{{ 'infra%d' | format(item) }}"
-      project_name: "{{ 'coolstore%d' | format(item) }}"
-    loop: "{{ range(1, 100 )|list }}"

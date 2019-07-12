@@ -8,12 +8,6 @@
     openshift_token:
     openshift_master_url: 
     openshift_user_password: openshift
-    git_repository_lab_path: redhat-capgemini-exchange/my-thai-star-workshop
-    git_repository_lab_reference: master
-    git_repository_guide_path: redhat-capgemini-exchange/my-thai-star-guides
-    git_repository_guide_reference: master
-    git_repository_guide_context:
-    guide_name: codeready
     gogs_dev_user: developer
     gogs_pwd: openshift
     infrasvcs_adm_user: adminuser
@@ -151,80 +145,3 @@
       stack_template: "{{ item }}"
     with_fileglob:
     - "{{ playbook_dir }}/templates/stacks/*-stack.json.j2"
-
-  # Install Service Mesh
-  - name: check if istio-system project exists
-    command: "oc get project istio-system"
-    register: istio_system_project_result
-    ignore_errors: true
-    changed_when: false
-  - name: Openshift Service Mesh Installation
-    block:
-      - name: create istio-operator project
-        command: "oc new-project istio-operator"
-      - name: deploy istio operator
-        command: >
-          oc apply -n istio-operator 
-          -f https://raw.githubusercontent.com/Maistra/istio-operator/maistra-0.10/deploy/servicemesh-operator.yaml
-      - name: create istio-system project
-        command: "oc new-project istio-system"
-      - name: delete project quota
-        shell: "oc delete limitrange --all -n istio-system"
-        ignore_errors: true
-      - name: deploy istio
-        command: >
-          oc create -n istio-system 
-          -f https://raw.githubusercontent.com/Maistra/istio-operator/maistra-0.10/deploy/examples/istio_v1alpha3_controlplane_cr_basic.yaml
-    when: 
-      - istio_system_project_result is failed
-      - openshift_service_mesh_installation or preconfigure_service_mesh_projects
-
-  # Get Jaeger and Grafana URL
-  - name: get Jaeger URL
-    command: "oc get route jaeger-query -o 'jsonpath={.spec.host}' -n istio-system"
-    register: jaeger_host
-    until: jaeger_host.rc == 0
-    retries: 60
-    delay: 30
-  - name: init 'jaeger_url' variable
-    set_fact:
-      jaeger_url: "https://{{ jaeger_host.stdout }}"
-  - name: get Grafana URL
-    command: "oc get route grafana -o 'jsonpath={.spec.host}' -n istio-system"
-    register: grafana_host
-    until: grafana_host.rc == 0
-    retries: 60
-    delay: 30
-  - name: init 'grafana_url' variable
-    set_fact:
-      grafana_url: "http://{{ grafana_host.stdout }}"
-
-  # Preconfigure Projects for Service Mesh usage
-  - name: preconfigure projects for service mesh
-    include: "{{ playbook_dir }}/tasks/create_project_service_mesh.yml"
-    vars:
-      username: "{{ 'user%d' | format(item) }}"
-      project_name: "{{ 'coolstore%d' | format(item) }}"
-      infra_project_name: "{{ 'infra%d' | format(item) }}"
-    loop: "{{ range(1, user_count|int + 1) | list }}"
-    when: 
-      - preconfigure_service_mesh_projects
-  
-  # Preconfigure cluster for Squash
-  - name: preconfigure cluster for Squash
-    command: >
-      oc create clusterrolebinding cluster-admin-binding-debug-1 \ 
-      --clusterrole=cluster-admin \
-      --user=system:serviceaccount:lab-infra:che-workspace
-    when: 
-      - preconfigure_squash
-  - name: preconfigure infra project for Squash
-    command: >
-      oc create clusterrolebinding cluster-admin-squash-plank-{{ infra_project_name }} \ 
-      --clusterrole=cluster-admin \
-      --user=system:serviceaccount:{{ infra_project_name }}:squash-plank
-    vars:
-      infra_project_name: "{{ 'infra%d' | format(item) }}"
-    loop: "{{ range(1, user_count|int + 1) | list }}"
-    when: 
-      - preconfigure_squash
