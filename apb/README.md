@@ -73,22 +73,22 @@ INFO Registry my-registry has 1 valid APBs available from 1 images scanned
 ```
 
 ### Running the APB
-Now that `apb` is aware of the `cloud-native-workshop-apb` APB in the registry, we can perform any supported action against the APB. The `apb bundle` subcommand gives you some actions you can perform on a specific bundle in a registry.
+Now that `apb` is aware of the `road-to-cloud-native-workshop-apb` APB in the registry, we can perform any supported action against the APB. The `apb bundle` subcommand gives you some actions you can perform on a specific bundle in a registry.
 
-We can `provision` the `cloud-native-workshop-apb` that now exists in the registry by running:
+We can `provision` the `road-to-cloud-native-workshop-apb` that now exists in the registry by running:
 
 ```bash
-apb bundle provision cloud-native-workshop-apb -n roadtocloudnative --follow
+apb bundle provision road-to-cloud-native-workshop-apb -n roadtocloudnative --follow
 ```
 
 The provision command will prompt you for all required parameters to your APB.
 
 __NOTE__: The `--follow` flag used above will show logs produced by the running APB.
 
-You can `deprovision` the `cloud-native-workshop-apb` that now exists in the registry by running:
+You can `deprovision` the `road-to-cloud-native-workshop-apb` that now exists in the registry by running:
 
 ```bash
-apb bundle deprovision cloud-native-workshop-apb -n roadtocloudnative --follow
+apb bundle deprovision road-to-cloud-native-workshop-apb -n roadtocloudnative --follow
 ```
 
 The deprovision command will prompt you for the specific instance to delete and all required parameters to your APB.
@@ -101,6 +101,5 @@ The deprovision command will prompt you for the specific instance to delete and 
 |`openshift_password`      |  | Password of the admin user |
 |`user_count`      | 5 | Number of Participants  |
 |`openshift_master_url`      |  | The address to OpenShift master URL to be displayed in the lab guide to participants  |
-|`openshift_user_password`      | openshift | The OpenShift password for participants to be displayed in the lab guide to participants  |
 |`infrasvcs_adm_user`      | adminuser | Admin user for infrastructure services (Gogs, Nexus, ...) |
 |`infrasvcs_adm_pwd`      | adminpwd | Admin password for infrastructure services (Gogs, Nexus, ...) |

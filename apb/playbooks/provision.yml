@@ -1,4 +1,4 @@
-- name: cloud-native-workshop-apb playbook to provision the application
+- name: road-to-cloud-native-workshop-apb playbook to provision the application
   hosts: localhost
   gather_facts: false
   connection: local
@@ -7,15 +7,11 @@
     openshift_password: 
     openshift_token:
     openshift_master_url: 
-    openshift_user_password: openshift
     gogs_dev_user: developer
     gogs_pwd: openshift
     infrasvcs_adm_user: adminuser
     infrasvcs_adm_pwd: adminpwd
-    user_count: 5
-    openshift_service_mesh_installation: true
-    preconfigure_service_mesh_projects: true
-    preconfigure_squash: false
+    user_count: 10
 
   roles:
   - role: ansible.kubernetes-modules
@@ -51,11 +47,6 @@
     shell: "oc delete limitrange --all -n {{ namespace }}"
     ignore_errors: true
     tags: always
-
-  # Etherpad
-  - name: install etherpad
-    include: "{{ playbook_dir }}/tasks/install_etherpad.yml"
-    tags: etherpad
 
   - import_role:
       name: openshift_sonatype_nexus

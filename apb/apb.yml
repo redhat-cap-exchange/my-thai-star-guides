@@ -1,5 +1,5 @@
 version: '1.0.0'
-name: cloud-native-workshop-apb
+name: road-to-cloud-native-workshop-apb
 description: APB to deploy required infra components for Road-to-Cloud-Native Workshops on an OpenShift cluster
 bindable: False
 async: optional
@@ -43,14 +43,6 @@ plans:
       title: OpenShift Master URL
       description: The address to OpenShift master URL to be displayed in the lab guide to participants
       type: string
-      required: true
-      display_type: string
-      display_group: Labs & Guides
-    - name: openshift_user_password
-      title: OpenShift User Password
-      description: The OpenShift password for participants to be displayed in the lab guide to participants
-      type: string
-      default: "openshift"
       required: true
       display_type: string
       display_group: Labs & Guides

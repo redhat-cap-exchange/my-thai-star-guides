@@ -27,7 +27,7 @@ items:
         containers:
           - env:
             - name: WORKSHOP_NAMESPACE
-              value: 'workshop'
+              value: 'roadtocloudnative'
             - name: CLUSTER_ID
               value: 'foo'
             - name: WORKSHOPS_URLS
@@ -72,7 +72,7 @@ items:
 - kind: Route
   apiVersion: "v1"
   metadata:
-    name: 'workshopper'
+    name: 'guides'
     annotations:
       kubernetes.io/tls-acme: "true"
   spec:
