@@ -9,6 +9,8 @@ vars:
   WORKSHOP_NAMESPACE: "roadtocloudnative"
   WORKSHOP_DOMAIN: "openshiftworkshop.com"
   CODEREADY_WORKSPACES_URL: "http://codeready-$WORKSHOP_NAMESPACE.apps.$CLUSTER_ID.$WORKSHOP_DOMAIN/"
+  OPENSHIFT_CONSOLE_URL: "https://master.$CLUSTER_ID.$WORKSHOP_DOMAIN/"
+
 modules:
   activate:
   - introduction

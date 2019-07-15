@@ -36,6 +36,8 @@ items:
             
             - name: CODEREADY_WORKSPACES_URL
               value: "http://codeready-$WORKSHOP_NAMESPACE.apps.$CLUSTER_ID.$WORKSHOP_DOMAIN/"
+            - name: OPENSHIFT_CONSOLE_URL
+              value: "https://master.$CLUSTER_ID.$WORKSHOP_DOMAIN/"
 
             - name: WORKSHOPS_URLS
               value: 'https://raw.githubusercontent.com/redhat-capgemini-exchange/my-thai-star-guides/master/_road_to_cloud_native.yml'
