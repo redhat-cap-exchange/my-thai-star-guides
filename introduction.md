@@ -7,7 +7,7 @@ and getting familiar with the OpenShift CLI and OpenShift Web Console.
 
 ### What is CodeReady Workspaces?
 
-![CodeReady]({% image_path codeready.png :width="400px" %})
+![CodeReady]({% image_path codeready.png, width=400px %})
 
 [Red Hat CodeReady Workspaces](https://developers.redhat.com/products/codeready-workspaces/overview/){:target="_blank"} is a collaborative Kubernetes-native development platform that delivers OpenShift workspaces and an IDE for rapid cloud application development.
 
