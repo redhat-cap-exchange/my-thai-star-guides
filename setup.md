@@ -61,7 +61,7 @@ Congratulations, you are now authenticated to the OpenShift server.
 
 OpenShift ships with a web-based console that will allow users to
 perform various tasks via a browser.  To get a feel for how the web console
-works, open your browser and `go to [OpenShift Web Console]({{OPENSHIFT_CONSOLE_URL}}){:target="_blank"}`.
+works, open your browser and go to [OpenShift Web Console]({{ OPENSHIFT_CONSOLE_URL }}){:target="_blank"}.
 
 
 The first screen you will see is the authentication screen. Enter your username and password (`$OPENSHIFT_USER @ $OPENSHIFT_PASSWORD`) and 
@@ -69,34 +69,3 @@ then log in. After you have authenticated to the web console, you will be presen
 list of projects that your user has permission to work with. 
 
 Now you are ready to get started with the labs!
-
-
-
-
-
-
-## Setup the workspace
-
-### Introduction to the lab environment
-
-* Overview CodeReady Workspaces
-
-### Introduction to devonfw and the reference app
-
-* https://github.com/devonfw
-* https://github.com/devonfw/my-thai-star
-
-### Introduction to workshop assets
-
-* https://github.com/redhat-capgemini-exchange
-* https://github.com/redhat-capgemini-exchange/my-thai-star
-* https://github.com/redhat-capgemini-exchange/my-thai-star-workshop
-  
-### Setup your own development workspace
-
-1. Create a new workspace
-- Add https://github.com/redhat-capgemini-exchange/my-thai-star
-
-2. Add workshop assets
-- Import project -> Git -> URL: https://github.com/redhat-capgemini-exchange/my-thai-star-workshop
-- Project Configuration: blank
