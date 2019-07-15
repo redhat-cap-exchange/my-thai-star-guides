@@ -43,26 +43,12 @@ In order to login, `issue the following command` and log in as `$OPENSHIFT_USER 
 
   $ oc login {{OPENSHIFT_CONSOLE_URL}}
 
-You may see the following output:
-
-  The server uses a certificate signed by an unknown authority.
-  You can bypass the certificate check, but any data you send to the server could be intercepted by others.
-  Use insecure connections? (y/n):
-
-Enter in `*Y*` to use a potentially insecure connection.  The reason you received
-this message is because we are using a self-signed certificate for this
-workshop, but we did not provide you with the CA certificate that was generated
-by OpenShift. In a real-world scenario, either OpenShift's certificate would be
-signed by a standard CA (eg: Thawte, Verisign, StartSSL, etc.) or signed by a
-corporate-standard CA that you already have installed on your system.
 
 Congratulations, you are now authenticated to the OpenShift server.
-
 
 OpenShift ships with a web-based console that will allow users to
 perform various tasks via a browser.  To get a feel for how the web console
 works, open your browser and go to [OpenShift Web Console]({{ OPENSHIFT_CONSOLE_URL }}){:target="_blank"}.
-
 
 The first screen you will see is the authentication screen. Enter your username and password (`$OPENSHIFT_USER @ $OPENSHIFT_PASSWORD`) and 
 then log in. After you have authenticated to the web console, you will be presented with a
