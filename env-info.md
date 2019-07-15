@@ -5,25 +5,21 @@ labs in this page. Note that the urls are also embedded inside each lab instruct
 
 **OPENSHIFT CONSOLE**
 
-https://master.devonfw-bd65.openshiftworkshop.com/console
-
-{{ OPENSHIFT_CONSOLE_URL }}
+[https://master.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/console](https://master.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/console){:target="_blank"}
 
 **OPENSHIFT DOCS**
+
+[link](url){:target="_blank"}
 
 {{ OPENSHIFT_DOCS_BASE }}
 
 **RED HAT CODEREADY WORKSPACES**
 
-Register an account on Eclipse Che using an email address.
-
-http://codeready-roadtocloudnative.apps.devonfw-bd65.openshiftworkshop.com/
+[http://codeready-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/](http://codeready-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/){:target="_blank"}
 
 **NEXUS MAVEN REPOSITORY**
 
-http://nexus.{{ CLUSTER_ID }}.{{ CLUSTER_DOMAIN }}/nexus/content/groups/public/
-
-http://nexus-roadtocloudnative.apps.devonfw-bd65.openshiftworkshop.com/
+[http://nexus-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/nexus/content/groups/public/](http://nexus-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/nexus/content/groups/public/){:target="_blank"}
 
 
-[http://nexus.{{ CLUSTER_ID }}.{{ CLUSTER_DOMAIN }}/nexus/content/groups/public/](http://nexus.{{ CLUSTER_ID }}.{{ CLUSTER_DOMAIN }}/nexus/content/groups/public/){:target="_blank"}
+[link](url){:target="_blank"}

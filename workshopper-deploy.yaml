@@ -28,6 +28,8 @@ items:
           - env:
             - name: WORKSHOP_NAMESPACE
               value: 'roadtocloudnative'
+            - name: WORKSHOP_DOMAIN
+              value: 'openshiftworkshop.com'
             - name: CLUSTER_ID
               value: 'foo'
             - name: WORKSHOPS_URLS
