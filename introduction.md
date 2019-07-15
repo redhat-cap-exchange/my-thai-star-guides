@@ -7,7 +7,7 @@ and getting familiar with the OpenShift CLI and OpenShift Web Console.
 
 ### What is CodeReady Workspaces?
 
-![CodeReady]({% image_path codeready.png %}){width=500px}
+![CodeReady]({% image_path codeready.png %}{width=500px})
 
 [Red Hat CodeReady Workspaces](https://developers.redhat.com/products/codeready-workspaces/overview/){:target="_blank"} is a collaborative Kubernetes-native development platform that delivers OpenShift workspaces and an IDE for rapid cloud application development.
 
@@ -23,12 +23,12 @@ Go to [CodeReady Workspaces]( {{CODEREADY_WORKSPACES_URL}} ){:target="_blank"} t
 
 ![CodeReady Workspaces - Log in]({% image_path codeready-oauth.png :width="500px" %})
 
-Log in as `*{{OPENSHIFT_USER}}/{{OPENSHIFT_PASSWORD}}*` and `*click on 'Allow selected permissions'*`
+Log in as `$OPENSHIFT_USER}}/$OPENSHIFT_PASSWORD` and `click on 'Allow selected permissions'`
 
-![CodeReady Workspaces - Log in]({% image_path codeready-login.png :width="500px" %})
+![CodeReady Workspaces - Log in]({% image_path codeready-login.png %})
 
-![CodeReady Workspaces - Log in]({% image_path codeready-authorize-access.png :width="500px" %})
+![CodeReady Workspaces - Log in]({% image_path codeready-authorize-access.png %})
 
 Finally, `enter your account information` and `click on 'Submit'`
 
-![CodeReady Workspaces - Log in]({% image_path codeready-account-information.png :width="300px" %})
+![CodeReady Workspaces - Log in]({% image_path codeready-account-information.png %})
