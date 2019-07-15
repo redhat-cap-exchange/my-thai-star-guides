@@ -61,9 +61,10 @@ Congratulations, you are now authenticated to the OpenShift server.
 
 OpenShift ships with a web-based console that will allow users to
 perform various tasks via a browser.  To get a feel for how the web console
-works, open your browser and `*go to {{OPENSHIFT_CONSOLE_URL}}[OpenShift Web Console^]*`.
+works, open your browser and `go to [OpenShift Web Console]({{OPENSHIFT_CONSOLE_URL}}){:target="_blank"}`.
 
-The first screen you will see is the authentication screen. Enter your username and password (`*{{OPENSHIFT_USER}}/{{OPENSHIFT_PASSWORD}}*`) and 
+
+The first screen you will see is the authentication screen. Enter your username and password (`$OPENSHIFT_USER @ $OPENSHIFT_PASSWORD`) and 
 then log in. After you have authenticated to the web console, you will be presented with a
 list of projects that your user has permission to work with. 
 
