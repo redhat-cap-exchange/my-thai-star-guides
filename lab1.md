@@ -17,6 +17,12 @@ Config java project and build it in CodeReady.
 mvn install -DskipTests=true
 ```
 
+#### Deploy the artifacts
+
+```shell
+mvn deploy -DskipTests=true
+```
+
 * Launch the java API service
 * Test access to the service
 
