@@ -25,40 +25,25 @@ Now you can import the project skeletons into your workspace.
 In the Project Explorer pane, `click on 'Import Project...'` and enter the following:
 
   * Type: **GIT**
-  * URL: **{{LABS_DOWNLOAD_URL}}**
-  * Name: **labs**
-  * Check **Skip the root folder of the archive**
+  * URL: **{{REPO_URL}}**
+  * Name: **my-thai-star**
+  * Check **Branch**
+  * Branch 'develop'
 
-image:{% image_path codeready-import.png %}[CodeReady Workspaces - Import Project,700]
+![CodeReady Workspaces - Workspace]({% image_path codeready-import.png %})
 
-`*Click on 'Import'*`. Make sure you choose the **Blank** project configuration since the zip file contains multiple 
-project skeletons. `*Click on 'Save'*`
+`Click on 'Import'`. Make sure you choose the **Blank** project configuration since the repository contains multiple project skeletons. `Click on 'Save'`
 
-image:{% image_path codeready-import-save.png %}[CodeReady Workspaces - Import Project,500]
+![CodeReady Workspaces - Workspace]({% image_path codeready-import-save.png %})
 
-=== Converting your project skeletons
-The projects are imported now into your workspace and is visible in the project explorer.
 
-CodeReady Workspaces is a full featured IDE and provides language specific capabilities for various project types. In order to 
-enable these capabilities, let's convert the imported project skeletons to Maven projects. 
 
-In the Project Explorer, `*right-click on 'catalog-spring-boot'*` then, `*click on 'Convert to Project'*`.
 
-image:{% image_path codeready-convert.png %}[CodeReady Workspaces - Convert to Project,500]
 
-`*Choose 'JAVA > Maven'*` from the project configurations and then `*click on 'Save'*`
 
-image:{% image_path codeready-maven.png %}[CodeReady Workspaces - Convert to Project,500]
-
-[WARNING]
-.Project Conversion
-====
-Repeat the above for **inventory-thorntail** and **gateway-vertx** projects.
-====
-
-[IMPORTANT]
+### [IMPORTANT]
 .Terminal Window of CodeReady Workspaces
-====
+
 For the rest of these labs, anytime you need to run a command in a terminal, you can use the CodeReady Workspaces **Terminal** window.
 
 image:{% image_path codeready-terminal.png %}[CodeReady Workspaces - Terminal, 700]
