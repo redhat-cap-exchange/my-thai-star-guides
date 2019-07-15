@@ -19,7 +19,4 @@ labs in this page. Note that the urls are also embedded inside each lab instruct
 
 **NEXUS MAVEN REPOSITORY**
 
-[http://nexus-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/nexus/content/groups/public/](http://nexus-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}/nexus/content/groups/public/){:target="_blank"}
-
-
-[link](url){:target="_blank"}
+[http://nexus-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}](http://nexus-{{ WORKSHOP_NAMESPACE }}.apps.{{ CLUSTER_ID }}.{{ WORKSHOP_DOMAIN }}){:target="_blank"}
