@@ -34,24 +34,20 @@ In the Project Explorer pane, `click on 'Import Project...'` and enter the follo
 
 For the rest of these labs, anytime you need to run a command in a terminal, you can use the CodeReady Workspaces *Terminal* window.
 
-![CodeReady Workspaces - Terminal]({% image_path codeready-import-save.png %})
+![CodeReady Workspaces - Terminal]({% image_path codeready-terminal.png %})
 
 
 ### Explore OpenShift with OpenShift CLI
 
 In order to login, `issue the following command` and log in as `$OPENSHIFT_USER @ $OPENSHIFT_PASSWORD`
 
-```bash
-$ oc login {{OPENSHIFT_CONSOLE_URL}}
-```
+  $ oc login {{OPENSHIFT_CONSOLE_URL}}
 
 You may see the following output:
 
-```bash
-The server uses a certificate signed by an unknown authority.
-You can bypass the certificate check, but any data you send to the server could be intercepted by others.
-Use insecure connections? (y/n):
-```
+  The server uses a certificate signed by an unknown authority.
+  You can bypass the certificate check, but any data you send to the server could be intercepted by others.
+  Use insecure connections? (y/n):
 
 Enter in `*Y*` to use a potentially insecure connection.  The reason you received
 this message is because we are using a self-signed certificate for this
